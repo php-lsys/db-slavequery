@@ -1,0 +1,33 @@
+{
+	"name": "lsys/db-slavequery",
+	"type" : "library",
+	"license": "Apache-2.0",
+	"description" : "lsys module db slave query",
+	"autoload":{
+		"psr-4": {
+        	"LSYS\\" : [
+        		"src/common/classes/LSYS/"
+        	],
+        	"LSYS\\SlaveQuery\\Cache\\" : [
+        		"src/cache-memcache/classes/LSYS/SlaveQuery/Cache/",
+        		"src/cache-memcached/classes/LSYS/SlaveQuery/Cache/",
+        		"src/cache-redis/classes/LSYS/SlaveQuery/Cache/"
+        	]
+		}
+    },
+    "require": {
+     	"lsys/db":"~0.0.1",
+     	"lsys/event":"~0.0.1"
+	},
+	"require-dev": {
+		"lsys/profiler":"~0.0.1",
+		"lsys/redis":"~0.0.1",
+     	"phpunit/phpunit" : "~7.1.5",
+     	"php-coveralls/php-coveralls":"~v2.0.0"
+	},
+	"suggest": {
+     	"lsys/memcache":"~0.0.1",
+     	"lsys/memcached":"~0.0.1",
+     	"lsys/redis":"~0.0.1"
+    }
+}
