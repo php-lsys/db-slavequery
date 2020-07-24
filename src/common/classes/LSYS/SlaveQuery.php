@@ -57,8 +57,7 @@ class SlaveQuery{
     }
     /**
      * SQL更改告知
-     * @param string $table_schema 默认数据库名
-     * @param string $sql
+     * @param Prepare $prepare
      */
     public function execNotify(Prepare $prepare){
         if($this->cache->delayed()<=0
