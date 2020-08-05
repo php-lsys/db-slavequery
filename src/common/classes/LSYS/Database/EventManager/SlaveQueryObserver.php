@@ -17,7 +17,8 @@ class SlaveQueryObserver implements EventObserver
     {
         switch ($event->getName()) {
             case DBEvent::SQL_OK:
-                $this->slave_query_check->execNotify($event->data("prepare"));
+				list($prepare)=(array)$event->getData();
+                $this->slave_query_check->execNotify($prepare);
             break;
         }
     }
